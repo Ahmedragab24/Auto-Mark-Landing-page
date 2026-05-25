@@ -1,280 +1,314 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auto-Mark Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/Css/index.css" />
-  </head>
-  <body>
-    <div class="glow-blob"></div>
 
-    <div class="app-wrapper">
-      <!-- <button
-        class="lang-switcher lang-switcher-mobile hide-on-desktop"
-        onclick="toggleLanguage()"
-      >
-        <span id="lang-text" class="lang-text" data-ar="English" data-en="عربي"
-          >English</span
-        >
-        <img src="assets/Icons/Encapsulated Group.svg" alt="Language Icon" />
-      </button> -->
-      <header class="navbar fade-in-down">
-        <div class="nav-brand-container">
-          <div class="nav-brand">
-            <img
-              src="assets/Images/Logo.png"
-              alt="Auto-Mark Logo"
-              class="brand-logo"
-            />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto-Mark Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/Css/index.v2.css" />
+</head>
 
-          <div class="nav-brand-text hide-on-mobile">
-            <span class="text1 lang-text" data-ar="تطبيق" data-en="App"
-              >تطبيق</span
-            >
-            <span class="text2 lang-text" data-ar="اوتومارك" data-en="AutoMark">
-              اوتومارك
-            </span>
-          </div>
+<body>
+  <div class="app-wrapper">
+
+    <!-- Header -->
+    <header class="navbar">
+      <div class="nav-brand">
+        <img src="assets/Icons/logo.svg" alt="Auto-Mark Logo" class="brand-logo" />
+      </div>
+      <div class="lang-switcher-capsule">
+        <button id="btn-ar" class="lang-btn active" onclick="setLanguage('ar')">عربي</button>
+        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hero">
+      <!-- Tagline Badge -->
+      <div class="tagline-badge">
+        <span class="lang-text" data-ar="أوتومارك منصة السيارات الأكثر انتشاراً داخل الإمارات"
+          data-en="AutoMark: The most popular car platform in the UAE">
+          أوتومارك منصة السيارات الأكثر انتشاراً داخل الإمارات
+        </span>
+        <span class="tagline-emoji"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 10px; margin-top: 1px;">
+          <svg width="18" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="border: 0.5px solid rgba(0,0,0,0.1); border-radius: 1px;">
+            <rect x="0" y="0" width="5" height="10" fill="#FF0000" />
+            <rect x="5" y="0" width="15" height="3.33" fill="#00732F" />
+            <rect x="5" y="3.33" width="15" height="3.34" fill="#FFFFFF" />
+            <rect x="5" y="6.67" width="15" height="3.33" fill="#000000" />
+          </svg>
+        </span>
+
+      </div>
+
+      <!-- Title -->
+      <h1 class="hero-title lang-html"
+        data-ar="سوّق سيارتك لآلاف المشترين في أقل من دقيقة على منصة <span class='highlight'>اوتومارك</span>"
+        data-en="Market your car to thousands of buyers in less than a minute on <span class='highlight'>AutoMark</span>">
+        سوّق سيارتك لآلاف المشترين في أقل من دقيقة على منصة <span class="highlight">اوتومارك</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle lang-html"
+        data-ar="حمّل التطبيق وانشر إعلانك في <strong>أقل من 60 ثانية.</strong> ينتشر على التطبيق والإنستقرام، <strong>ويبدأ من 60 درهم بس.</strong>"
+        data-en="Download the app and post your ad in <strong>less than 60 seconds.</strong> Shared on the app & Instagram, <strong>starts from only 60 AED.</strong>">
+        حمّل التطبيق وانشر إعلانك في <strong>أقل من 60 ثانية.</strong> ينتشر على التطبيق والإنستقرام، <strong>ويبدأ من
+          60 درهم بس.</strong>
+      </p>
+    </main>
+
+    <!-- Pricing Cards Section -->
+    <section class="cards-container">
+
+      <!-- Pricing Card 1: App Posting -->
+      <div class="pricing-card card-app">
+        <div class="card-badge lang-text" data-ar="الأوفر والأفضل" data-en="Best Value">الأوفر والأفضل</div>
+
+        <div class="card-title-pill lang-text" data-ar="النشر من خلال التطبيق" data-en="Post via App">
+          النشر من خلال التطبيق
         </div>
-        <div class="nav-actions">
-          <div class="nav-store-btns">
-            <a
-              href="https://apps.apple.com/eg/app/automark-%D8%A7%D9%88%D8%AA%D9%88%D9%85%D8%A7%D8%B1%D9%83/id6473959588?l=ar"
-              class="store-btn black-btn apple-btn"
-              target="_blank"
-            >
-              <img
-                src="assets/Icons/Apple.svg"
-                alt="Apple Store"
-                class="store-icon"
-              />
+
+        <div class="price-section">
+          <span class="price-starts lang-text" data-ar="يبدء من" data-en="Starts from">يبدء من</span>
+          <span class="price-value price-app">60</span>
+          <span class="price-currency lang-text" data-ar="درهم" data-en="AED">درهم</span>
+        </div>
+
+        <ul class="features-list">
+          <li class="feature-item ">
+            <span class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#119F34" />
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="lang-text" data-ar="ينزل داخل التطبيق" data-en="Published inside the app">ينزل داخل
+              التطبيق</span>
+          </li>
+          <li class="feature-item ">
+            <span class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#119F34" />
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="lang-text enable" data-ar="ينزل على الإنستقرام" data-en="Shared on Instagram">ينزل
+              على
+              الإنستقرام</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#119F34" />
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="lang-text" data-ar="انتشار أوسع ومبيعات أسرع" data-en="Wider reach & faster sales">انتشار أوسع
+              ومبيعات أسرع</span>
+          </li>
+        </ul>
+
+        <div class="card-actions">
+          <div class="store-btn-group">
+            <a href="https://apps.apple.com/eg/app/automark-%D8%A7%D9%88%D8%AA%D9%88%D9%85%D8%A7%D8%B1%D9%83/id6473959588?l=ar"
+              class="store-download-btn" target="_blank">
+              <img src="assets/Icons/Apple.svg" alt="Apple Store" class="store-btn-icon" />
               <div class="store-btn-text">
-                <span
-                  class="small-text lang-text"
-                  data-ar="حمل التطبيق من"
-                  data-en="Download on the"
-                  >حمل التطبيق من</span
-                >
-                <span
-                  class="large-text lang-text"
-                  data-ar="أبل ستور"
-                  data-en="App Store"
-                  >أبل ستور</span
-                >
+                <span class="small-text lang-text" data-ar="حمّل الآن من" data-en="Download on the">حمّل الآن من</span>
+                <span class="large-text lang-text" data-ar="ابل ستور" data-en="App Store">ابل ستور</span>
               </div>
             </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.secItDevelopers.auto_mark_app"
-              class="store-btn black-btn google-btn"
-              target="_blank"
-            >
-              <img
-                src="assets/Icons/Playstore.svg"
-                alt="Google Play"
-                class="store-icon"
-              />
+            <a href="https://play.google.com/store/apps/details?id=com.secItDevelopers.auto_mark_app"
+              class="store-download-btn" target="_blank">
+              <img src="assets/Icons/Playstore.svg" alt="Google Play" class="store-btn-icon" />
               <div class="store-btn-text">
-                <span
-                  class="small-text lang-text"
-                  data-ar="حمل التطبيق من"
-                  data-en="GET IT ON"
-                  >حمل التطبيق من</span
-                >
-                <span
-                  class="large-text lang-text"
-                  data-ar="جوجل بلاي"
-                  data-en="Google Play"
-                  >جوجل بلاي</span
-                >
+                <span class="small-text lang-text" data-ar="حمّل الآن من" data-en="GET IT ON">حمّل الآن من</span>
+                <span class="large-text lang-text" data-ar="جوجل بلاي" data-en="Google Play">جوجل بلاي</span>
               </div>
             </a>
           </div>
-          <div class="lang-switcher-container">
-            <button class="lang-switcher" onclick="toggleLanguage()">
-              <span class="lang-switcher-text">English</span>
-              <img
-                src="assets/Icons/globe.png"
-                alt="Language Icon"
-                class="lang-switcher-icon"
-              />
-            </button>
-          </div>
         </div>
-      </header>
+      </div>
 
-      <main class="hero">
-        <div class="hero-text-content">
-          <h1 class="hero-title fade-in-up delay-1">
-            <span
-              class="lang-text"
-              data-ar="انشر إعلانك في تطبيق أوتومارك"
-              data-en="Post your ad on AutoMark"
-              >انشر إعلانك في تطبيق أوتومارك</span
-            >
-            <br />
-            <span
-              class="lang-text"
-              data-ar="وينزل في أنستجرام "
-              data-en="and get it shared on Instagram for "
-              >وينزل في أنستجرام
+      <!-- Pricing Card 2: WhatsApp Posting -->
+      <div class="pricing-card card-whatsapp">
+        <div class="card-title-pill lang-text" data-ar="النشر من خلال واتس اب" data-en="Post via WhatsApp">
+          النشر من خلال واتس اب
+        </div>
+
+        <div class="price-section">
+          <span class="price-starts lang-text" data-ar="يبدء من" data-en="Starts from">يبدء من</span>
+          <span class="price-value price-whatsapp">100</span>
+          <span class="price-currency lang-text" data-ar="درهم" data-en="AED">درهم</span>
+        </div>
+
+        <ul class="features-list">
+          <li class="feature-item disabled">
+            <span class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3B30" />
+                <path d="M7 7L13 13M13 7L7 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
-            <span class="highlight lang-text" data-ar="مجانا" data-en="free"
-              >مجانا</span
-            >
-          </h1>
+            <span class="lang-text" data-ar="ينزل داخل التطبيق" data-en="Published inside the app">ينزل داخل
+              التطبيق</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#119F34" />
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="lang-text" data-ar="ينزل على الإنستقرام" data-en="Shared on Instagram">ينزل على
+              الإنستقرام</span>
+          </li>
+          <li class="feature-item disabled">
+            <span class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3B30" />
+                <path d="M7 7L13 13M13 7L7 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="lang-text" data-ar="انتشار أوسع ومبيعات أسرع" data-en="Wider reach & faster sales">انتشار أوسع
+              ومبيعات أسرع</span>
+          </li>
+        </ul>
 
-          <div class="dealer-section">
-            <p
-              class="dealer-text lang-text fade-in-up delay-4"
-              data-ar="حمل التطبيق الان"
-              data-en="Download the app now"
-            >
-              حمل التطبيق الان
-            </p>
-
-            <div class="hero-store-btns fade-in-up delay-3">
-              <a
-                href="https://apps.apple.com/eg/app/automark-%D8%A7%D9%88%D8%AA%D9%88%D9%85%D8%A7%D8%B1%D9%83/id6473959588?l=ar"
-                class="store-btn hero-store-btn black-btn apple-btn"
-                target="_blank"
-              >
-                <img
-                  src="assets/Icons/Apple.svg"
-                  alt="Apple Store"
-                  class="store-icon"
-                />
-                <div class="store-btn-text">
-                  <span
-                    class="small-text lang-text"
-                    data-ar="حمل التطبيق من"
-                    data-en="Download on the"
-                    >حمل التطبيق من</span
-                  >
-                  <span
-                    class="large-text lang-text"
-                    data-ar="أبل ستور"
-                    data-en="App Store"
-                    >أبل ستور</span
-                  >
-                </div>
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.secItDevelopers.auto_mark_app"
-                class="store-btn hero-store-btn black-btn google-btn"
-                target="_blank"
-              >
-                <img
-                  src="assets/Icons/Playstore.svg"
-                  alt="Google Play"
-                  class="store-icon"
-                />
-                <div class="store-btn-text">
-                  <span
-                    class="small-text lang-text"
-                    data-ar="حمل التطبيق من"
-                    data-en="GET IT ON"
-                    >حمل التطبيق من</span
-                  >
-                  <span
-                    class="large-text lang-text"
-                    data-ar="جوجل بلاي"
-                    data-en="Google Play"
-                    >جوجل بلاي</span
-                  >
-                </div>
-              </a>
+        <div class="card-actions">
+          <a href="https://wa.me/97154322210" class="whatsapp-action-btn" target="_blank">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.004 2C6.48 2 2 6.48 2 12.004C2 13.908 2.532 15.684 3.456 17.208L2.084 22.2L7.26 20.856C8.688 21.696 10.308 22.188 12.004 22.188C17.528 22.188 22.008 17.708 22.008 12.184C22 6.48 17.528 2 12.004 2ZM12.004 20.52C10.452 20.52 8.976 20.088 7.692 19.308L7.38 19.116L4.308 19.92L5.124 16.92L4.92 16.596C4.056 15.228 3.588 13.632 3.588 12.004C3.588 7.356 7.368 3.576 12.004 3.576C16.64 3.576 20.42 7.356 20.42 12.004C20.42 16.652 16.64 20.52 12.004 20.52Z"
+                fill="white" />
+              <path
+                d="M15.86 14.1C15.644 14.004 14.6 13.488 14.408 13.416C14.216 13.344 14.072 13.308 13.94 13.512C13.808 13.716 13.412 14.172 13.292 14.304C13.172 14.436 13.052 14.46 12.836 14.352C12.62 14.244 11.924 14.016 11.1 13.284C10.452 12.708 10.02 11.988 9.888 11.772C9.756 11.556 9.876 11.436 9.984 11.328C10.08 11.232 10.2 11.1 10.308 10.968C10.416 10.836 10.452 10.74 10.524 10.596C10.596 10.452 10.56 10.332 10.512 10.224C10.464 10.116 10.08 9.168 9.92 8.784C9.764 8.412 9.608 8.46 9.488 8.46C9.38 8.46 9.248 8.448 9.116 8.448C8.984 8.448 8.768 8.496 8.588 8.688C8.408 8.88 7.904 9.348 7.904 10.308C7.904 11.268 8.6 12.192 8.696 12.324C8.792 12.456 10.052 14.4 12.008 15.228C13.964 16.056 13.964 15.78 14.324 15.744C14.684 15.708 15.724 15.144 15.94 14.544C16.156 13.944 16.156 13.428 15.86 14.1Z"
+                fill="white" />
+            </svg>
+            <div class="whatsapp-btn-text">
+              <span class="small-text lang-text" data-ar="واتس آب" data-en="WhatsApp">واتس آب</span>
+              <span class="large-text" dir="ltr"><bdi dir="ltr">054 32 2210</bdi></span>
             </div>
-          </div>
-
-          <div class="dealer-section">
-            <p
-              class="dealer-text lang-text fade-in-up delay-4"
-              data-ar="وللاشتراك في باقة التجار والمعارض"
-              data-en="To subscribe to the dealers and showrooms"
-            >
-              وللاشتراك في باقة التجار والمعارض
-            </p>
-
-            <a
-              href="https://wa.me/971543322210"
-              class="whatsapp-btn fade-in-up delay-5"
-              target="_blank"
-            >
-              <img
-                src="assets/Icons/whatsapp.svg"
-                alt="WhatsApp"
-                class="wa-icon"
-              />
-              <div class="store-btn-text wa-text-container">
-                <span
-                  class="small-text lang-text"
-                  data-ar="واتساب فقط"
-                  data-en="WhatsApp Only"
-                  >واتساب فقط</span
-                >
-                <span
-                  class="large-text lang-text"
-                  data-ar="+971 54 332 2210"
-                  data-en="+971 54 332 2210"
-                  dir="ltr"
-                  >+971 54 332 2210</span
-                >
-              </div>
-            </a>
-          </div>
+          </a>
         </div>
+      </div>
 
-        <div class="hero-image-container">
-          <img
-            src="assets/Images/App.png"
-            alt="Auto-Mark App"
-            class="app-image lang-img"
-            data-ar="assets/Images/App.png"
-            data-en="assets/Images/App-en.png"
-          />
-        </div>
-      </main>
-    </div>
+    </section>
 
-    <script>
-      let currentLang = "ar";
+    <!-- Dealers & Showrooms Banner -->
+    <section class="dealers-banner">
+      <div class="dealers-text">
+        <span class="dealers-title lang-text" data-ar="للتجار والمعارض" data-en="Dealers & Showrooms">للتجار
+          والمعارض</span>
+        <span class="dealers-subtitle lang-text" data-ar="باقات اشتراك خاصة وميزات متقدمة"
+          data-en="Special subscription packages & advanced features">باقات اشتراك خاصة وميزات متقدمة</span>
+      </div>
+      <a href="https://wa.me/97154322210" class="dealers-btn lang-text" data-ar="اشترك الحين" data-en="Subscribe Now"
+        target="_blank">اشترك الحين</a>
+    </section>
 
-      function toggleLanguage() {
-        setLanguage(currentLang === "ar" ? "en" : "ar");
-      }
+    <!-- Features Footer -->
+    <footer class="features-footer">
+      <div class="footer-item">
+        <span class="footer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+        </span>
+        <span class="lang-text" data-ar="نشر فوري" data-en="Instant Publishing">نشر فوري</span>
+      </div>
 
-      function setLanguage(lang) {
-        currentLang = lang;
-        document.documentElement.setAttribute("lang", currentLang);
-        document.documentElement.setAttribute(
-          "dir",
-          currentLang === "ar" ? "rtl" : "ltr",
-        );
+      <div class="footer-item">
+        <span class="footer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </span>
+        <span class="lang-text" data-ar="دفع آمن داخل Stripe" data-en="Secure payment inside Stripe">دفع آمن داخل
+          Stripe</span>
+      </div>
 
-        // Update toggle button text (show the OTHER language name)
-        const btnText = document.querySelector(".lang-switcher-text");
-        if (btnText) {
-          btnText.textContent = currentLang === "ar" ? "English" : "عربي";
+      <div class="footer-item">
+        <span class="footer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+        </span>
+        <span class="lang-text" data-ar="أقل من 60 ثانية" data-en="Less than 60 seconds">أقل من 60 ثانية</span>
+      </div>
+
+      <div class="footer-item">
+        <span class="footer-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+        </span>
+        <span class="lang-text" data-ar="إعلانات موثوقة" data-en="Trusted Ads">إعلانات موثوقة</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Language Toggle Script -->
+  <script>
+    let currentLang = "ar";
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.setAttribute("lang", currentLang);
+      document.documentElement.setAttribute(
+        "dir",
+        currentLang === "ar" ? "rtl" : "ltr",
+      );
+
+      // Update active class on buttons
+      const btnAr = document.getElementById("btn-ar");
+      const btnEn = document.getElementById("btn-en");
+      if (btnAr && btnEn) {
+        if (currentLang === "ar") {
+          btnAr.classList.add("active");
+          btnEn.classList.remove("active");
+        } else {
+          btnEn.classList.add("active");
+          btnAr.classList.remove("active");
         }
-
-        document.querySelectorAll(".lang-text").forEach((el) => {
-          el.textContent = el.getAttribute(`data-${currentLang}`);
-        });
-
-        document.querySelectorAll(".lang-img").forEach((el) => {
-          el.src = el.getAttribute(`data-${currentLang}`);
-        });
       }
-    </script>
-  </body>
+
+      // Translate general text
+      document.querySelectorAll(".lang-text").forEach((el) => {
+        const val = el.getAttribute(`data-${currentLang}`);
+        if (val) {
+          el.textContent = val;
+        }
+      });
+
+      // Translate HTML content (for highlights)
+      document.querySelectorAll(".lang-html").forEach((el) => {
+        const val = el.getAttribute(`data-${currentLang}`);
+        if (val) {
+          el.innerHTML = val;
+        }
+      });
+    }
+  </script>
+</body>
+
 </html>

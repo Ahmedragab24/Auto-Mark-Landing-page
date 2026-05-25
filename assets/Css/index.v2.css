@@ -1,0 +1,636 @@
+@import url('https://db.onlinewebfonts.com/c/52d8807d9fbbf1119b489d81d2f8319e?family=Expo+Arabic');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Expo Arabic", "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #1c1c1e;
+  background-color: #FAFBFB;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 20px 48px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Navbar / Header */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+/* Language Switcher Capsule */
+.lang-switcher-capsule {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #353535;
+  border-radius: 50px;
+  padding: 3px;
+  gap: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #8E8E93;
+}
+
+.lang-btn.active {
+  background-color: #0b0b0c;
+  color: #FFFFFF;
+}
+
+/* Main Hero Section */
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align elements to start (Right in RTL, Left in LTR) */
+  text-align: start;
+  /* Align text to start (Right in RTL, Left in LTR) */
+  margin-bottom: 32px;
+}
+
+/* Tagline Badge */
+.tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #FFF0F0;
+  border: 1px solid #FFE2E2;
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FF3B30;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+/* Hero Heading */
+.hero-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0b0b0c;
+  margin-bottom: 16px;
+}
+
+.hero-title .highlight {
+  color: #FF3B30;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-size: 15px;
+  color: #8E8E93;
+  line-height: 1.6;
+  max-width: 700px;
+  font-weight: 600;
+}
+
+.hero-subtitle strong {
+  color: #1c1c1e;
+}
+
+/* Pricing Cards Layout */
+.cards-container {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.pricing-card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align inner items to start (right in RTL, left in LTR) */
+  text-align: start;
+  /* Align text to start */
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* App Posting Card (Green Highlight) */
+.card-app {
+  border: 2px solid #119F34;
+}
+
+/* WhatsApp Posting Card (Gray) */
+.card-whatsapp {
+  border: 1.5px solid #000000;
+  /* Black/dark border matching screenshot */
+}
+
+/* Best Value Badge - aligned to the top-right in RTL and top-left in LTR */
+.card-badge {
+  position: absolute;
+  top: -13px;
+  right: 24px;
+  background-color: #119F34;
+  color: #FFFFFF;
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+html[dir="ltr"] .card-badge {
+  right: auto;
+  left: 24px;
+}
+
+/* Card Title Outlined Pill */
+.card-title-pill {
+  border: 1.5px solid #1c1c1e;
+  border-radius: 50px;
+  padding: 5px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1c1c1e;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.price-starts {
+  font-size: 12.5px;
+  color: #8E8E93;
+  font-weight: 600;
+}
+
+.price-value {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.price-app {
+  color: #119F34;
+}
+
+.price-whatsapp {
+  color: #1c1c1e;
+}
+
+.price-currency {
+  font-size: 13px;
+  color: #8E8E93;
+  font-weight: 700;
+}
+
+/* Checklist */
+.features-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 900;
+  color: #119F34;
+  /* Brand green for enabled items */
+}
+
+.feature-item.disabled {
+  color: #FF3B30;
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+.feature-item.enable,
+.feature-item .enable {
+  color: #119F34;
+}
+
+.feature-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Action Buttons */
+.card-actions {
+  width: 100%;
+  margin-top: auto;
+}
+
+.store-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.store-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0b0c;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  gap: 12px;
+  transition: background-color 0.2s;
+  height: 52px;
+  width: 100%;
+}
+
+.store-download-btn:hover {
+  background-color: #1c1c1e;
+}
+
+.store-btn-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.store-btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.store-btn-text .small-text {
+  font-size: 9px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.store-btn-text .large-text {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+/* WhatsApp Button */
+.whatsapp-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #119F34;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  gap: 10px;
+  transition: background-color 0.2s;
+  width: 100%;
+  height: 52px;
+  font-weight: 700;
+}
+
+.whatsapp-action-btn:hover {
+  background-color: #0e832b;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.whatsapp-btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.25;
+}
+
+.whatsapp-btn-text .small-text {
+  font-size: 10px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.whatsapp-btn-text .large-text {
+  font-size: 14.5px;
+  font-weight: 800;
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* Dealers Banner Section */
+.dealers-banner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #E5E5EA;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.dealers-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: start;
+  /* Automatically handles LTR/RTL text alignment */
+}
+
+.dealers-title {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #1c1c1e;
+}
+
+.dealers-subtitle {
+  font-size: 13px;
+  color: #8E8E93;
+  font-weight: 600;
+}
+
+.dealers-btn {
+  background-color: #0b0b0c;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.dealers-btn:hover {
+  background-color: #1c1c1e;
+}
+
+/* Footer Section */
+.features-footer {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8E8E93;
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  color: #8E8E93;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 768px) {
+  .app-wrapper {
+    padding: 16px 12px 32px 12px;
+  }
+
+  .navbar {
+    margin-bottom: 24px;
+  }
+
+  .brand-logo {
+    height: 36px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    line-height: 1.35;
+  }
+
+  .tagline-badge {
+    font-size: 9px;
+    padding: 4px 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 13.5px;
+  }
+
+  /* Keep pricing cards side-by-side on mobile */
+  .cards-container {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .pricing-card {
+    padding: 20px 10px;
+    border-radius: 16px;
+  }
+
+  .card-badge {
+    top: -10px;
+    font-size: 9px;
+    padding: 2px 8px;
+    right: 12px;
+  }
+
+  html[dir="ltr"] .card-badge {
+    right: auto;
+    left: 12px;
+  }
+
+  .card-title-pill {
+    font-size: 11px;
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    border-width: 1px;
+    word-break: keep-all;
+  }
+
+  .price-section {
+    margin-bottom: 16px;
+    gap: 2px;
+  }
+
+  .price-value {
+    font-size: 26px;
+  }
+
+  .price-starts {
+    font-size: 10px;
+  }
+
+  .price-currency {
+    font-size: 10px;
+  }
+
+  .features-list {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .feature-item {
+    font-size: 10.5px;
+    gap: 6px;
+  }
+
+  .feature-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .store-download-btn {
+    height: 40px;
+    padding: 4px 6px;
+    gap: 6px;
+    border-radius: 8px;
+  }
+
+  .store-btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .store-btn-text .small-text {
+    font-size: 6px;
+  }
+
+  .store-btn-text .large-text {
+    font-size: 9px;
+  }
+
+  .whatsapp-action-btn {
+    height: 40px;
+    padding: 4px 6px;
+    gap: 4px;
+    border-radius: 8px;
+    font-size: 11.5px;
+  }
+
+  .whatsapp-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .whatsapp-btn-text .small-text {
+    font-size: 6.5px;
+  }
+
+  .whatsapp-btn-text .large-text {
+    font-size: 9.5px;
+  }
+
+  /* Keep Dealers banner as row on mobile */
+  .dealers-banner {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    padding: 16px 14px;
+  }
+
+  .dealers-title {
+    font-size: 13.5px;
+  }
+
+  .dealers-subtitle {
+    font-size: 11px;
+  }
+
+  .dealers-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .features-footer {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .footer-item {
+    font-size: 9px;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  .footer-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .footer-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+}
